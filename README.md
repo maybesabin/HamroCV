@@ -1,7 +1,8 @@
-# HamroCV - Personal CV & Resume builder for your next job interview.
+# HamroCV 
+## - Personal CV & Resume builder for your next job interview.
 
-## HamroCV aims to build a quick and easy CV by cutting out the unneccessary informations that might reject your CV.
-## It is straight to the point & provides a beautiful UI/UX.
+### HamroCV aims to build a quick and easy CV by cutting out the unneccessary informations that might reject your CV.
+### It is straight to the point & provides a beautiful UI/UX.
 
 ### Technologies Used:
 ## React JS, Tailwind CSS, ShadCN UI
