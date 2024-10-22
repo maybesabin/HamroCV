@@ -1,18 +1,27 @@
-# HamroCV 
-## - Personal CV & Resume builder for your next job interview.
+# HamroCV
 
-### HamroCV aims to build a quick and easy CV by cutting out the unneccessary informations that might reject your CV.
-### It is straight to the point & provides a beautiful UI/UX.
+### Personal CV & Resume Builder for Your Next Job Interview
 
-### Technologies Used:
-## React JS, Tailwind CSS, ShadCN UI
+**HamroCV** aims to build a quick and easy CV by cutting out unnecessary information that might lead to rejection. It is straight to the point and provides a beautiful UI/UX.
 
-# To run this project locally:
-## Step 1: Clone the project 
-### git clone 'respositorylink'
+---
 
-## Step 2: Install npm
-### npm install
+## Technologies Used
 
-## Step 3: Run the project
-### npm run dev
+- **React JS**
+- **Tailwind CSS**
+- **ShadCN UI**
+
+---
+
+## How to Run This Project Locally
+
+### Step 1: Clone the Project
+#### git clone 'repository_link'
+
+### Step 2: Install npm
+#### npm install
+
+### Step 3: Run the project
+#### npm run dev
+
