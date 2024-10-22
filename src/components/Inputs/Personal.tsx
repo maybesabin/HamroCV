@@ -7,7 +7,7 @@ import { Button } from "../ui/button";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { useActive } from '../../Context/Context';
 
-const About = () => {
+const Personal = () => {
     const { userData, setUserData } = useUserData();
     const { setIsActive } = useActive();
 
@@ -16,9 +16,8 @@ const About = () => {
         setUserData((prevData) => ({ ...prevData, [name]: value }));
     };
 
-
     return (
-        <div className='pt-24 pr-4 flex flex-col items-start gap-9 justify-start h-full overscroll-y-scroll'>
+        <div className='pt-24 pr-4 flex flex-col items-start gap-9 justify-start min-h-screen overscroll-y-scroll'>
             <h1 className='text-4xl font-bold text-transparent bg-gradient-to-b from-blue-600 to-blue-400 bg-clip-text'>
                 Personal Information.
             </h1>
@@ -36,12 +35,12 @@ const About = () => {
 
             <div className="flex items-center gap-6 w-full">
                 <div className="flex flex-col items-start gap-2 w-1/2">
-                    <Label htmlFor="country">Country</Label>
-                    <Input type="text" value={userData.country} onChange={handleChange} name="country" />
-                </div>
-                <div className="flex flex-col items-start gap-2 w-1/2">
                     <Label htmlFor="city">City</Label>
                     <Input type="text" value={userData.city} onChange={handleChange} name="city" />
+                </div>
+                <div className="flex flex-col items-start gap-2 w-1/2">
+                    <Label htmlFor="country">Country</Label>
+                    <Input type="text" value={userData.country} onChange={handleChange} name="country" />
                 </div>
             </div>
 
@@ -53,7 +52,10 @@ const About = () => {
                 <div className="flex flex-col items-start gap-2 w-1/2">
                     <Label htmlFor="phoneNumber">Phone</Label>
                     <div className="flex items-center gap-2 w-full">
-                        <Input type="text" value={userData.countryCode} onChange={handleChange} name="countryCode" className="w-1/6 flex items-center justify-center" />
+                        <div className="flex items-center w-1/6 relative">
+                            <Input maxLength={3} placeholder={userData.countryCode} type="text" value={userData.countryCode} onChange={handleChange} name="countryCode" className="w-full flex items-center pl-4 justify-center" />
+                            <span className="absolute text-zinc-400 top-[0.55rem] left-1">+</span>
+                        </div>
                         <Input type="text" value={userData.phoneNumber} onChange={handleChange} name="phoneNumber" />
                     </div>
                 </div>
@@ -61,22 +63,22 @@ const About = () => {
 
             <div className="flex flex-col items-start gap-2 w-full">
                 <Label htmlFor="summary">Summary</Label>
-                <Textarea name="summary" value={userData.summary} onChange={handleChange} placeholder="Describe yourself..." className="h-40" style={{ resize: "none" }} />
+                <Textarea maxLength={450} name="summary" value={userData.summary} onChange={handleChange} placeholder="Describe yourself..." className="h-40 w-full max-w-full" style={{ resize: "none" }} />
             </div>
 
             <div className="flex items-center gap-6 w-full">
                 <div className="flex flex-col items-start gap-2 w-1/2">
-                    <Label htmlFor="githubProfile">Github Username</Label>
+                    <Label htmlFor="githubProfile">Github URL</Label>
                     <Input type="text" value={userData.githubProfile} onChange={handleChange} name="githubProfile" />
                 </div>
                 <div className="flex flex-col items-start gap-2 w-1/2">
-                    <Label htmlFor="linkedinProfile">LinkedIn Profile</Label>
+                    <Label htmlFor="linkedinProfile">LinkedIn URL</Label>
                     <Input type="text" value={userData.linkedinProfile} onChange={handleChange} name="linkedinProfile" />
                 </div>
             </div>
 
             <div className="flex flex-col items-start gap-2 w-full">
-                <Label htmlFor="personalWebsite">Personal Website</Label>
+                <Label htmlFor="personalWebsite">Personal Website URL</Label>
                 <div className="flex items-center gap-4 w-full">
                     <Input value={userData.personalWebsite} onChange={handleChange} type="text" name="personalWebsite" />
                     <div className="flex items-center bg-blue-500 text-white font-semibold h-10 w-48 text-xs cursor-pointer hover:bg-blue-600 rounded-full justify-center gap-2">
@@ -93,4 +95,4 @@ const About = () => {
     )
 }
 
-export default About
+export default Personal;

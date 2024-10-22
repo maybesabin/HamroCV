@@ -39,7 +39,7 @@ interface UserData {
     languages: Languages[],
     technicalSkills: TechnicalSkills[],
     softSkills: SoftSkills[],
-    frameworks: Frameworks[]
+    frameworks: Frameworks[],
 }
 
 
@@ -78,7 +78,7 @@ export const UserDataProvider: React.FC<UserDataProviderProps> = ({ children }) 
         linkedinProfile: '',
         githubProfile: '',
         personalWebsite: '',
-        countryCode: '+977',
+        countryCode: '977',
         companies: [],
         languages: [],
         technicalSkills: [],

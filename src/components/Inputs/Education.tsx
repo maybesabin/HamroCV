@@ -2,7 +2,7 @@
 
 const Education = () => {
     return (
-        <div className='pt-24'>Education</div>
+        <div className='pt-24 min-h-screen'>Education</div>
     )
 }
 

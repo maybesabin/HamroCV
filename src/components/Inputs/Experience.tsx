@@ -41,10 +41,13 @@ const Experience = () => {
     };
 
     return (
-        <div className='pt-24 pr-4 flex flex-col items-start gap-9 justify-start h-full overscroll-y-scroll'>
-            <h1 className='text-4xl font-bold text-transparent bg-gradient-to-b from-blue-600 to-blue-400 bg-clip-text'>
-                Work Experience.
-            </h1>
+        <div className='pt-24 pr-4 flex flex-col items-start gap-9 justify-start min-h-screen'>
+            <div className="flex flex-col items-start gap-1">
+                <h1 className='text-4xl font-bold text-transparent bg-gradient-to-b from-blue-600 to-blue-400 bg-clip-text'>
+                    Work Experience.
+                </h1>
+                <p className="text-xs text-zinc-600">If you don't have any past  work experiences, you can skip this section.</p>
+            </div>
 
             <Button onClick={addCompany}><AddIcon />Add a company</Button>
 
