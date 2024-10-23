@@ -5,6 +5,7 @@ import toast from "react-hot-toast";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import DeleteIcon from '@mui/icons-material/Delete';
+import { Label } from "@/components/ui/label";
 
 type SoftSkillsProps = {
     skillsData: { softSkills: { title: string }[] };
@@ -43,7 +44,7 @@ const SoftSkills = ({ skillsData, setSkillsData }: SoftSkillsProps) => {
 
     return (
         <div className="flex flex-col items-start gap-2 w-full">
-            <h1 className="text-xl font-semibold">Soft Skills</h1>
+            <Label>Soft Skills</Label>
 
             <Button onClick={addSoftSkill}>
                 <AddIcon />Add Soft Skill
@@ -81,7 +82,7 @@ const SoftSkills = ({ skillsData, setSkillsData }: SoftSkillsProps) => {
                     );
                 })}
             </div>
-        </div>
+        </div >
     );
 };
 

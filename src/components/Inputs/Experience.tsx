@@ -57,6 +57,7 @@ const Experience = () => {
                         <div className="w-1/2 flex flex-col items-start gap-2">
                             <Label htmlFor={`companyName-${index}`}>Company's Name</Label>
                             <Input
+                                maxLength={35}
                                 type="text"
                                 name={`companyName-${index}`}
                                 value={company.companyName}
@@ -72,6 +73,7 @@ const Experience = () => {
                             <Label htmlFor={`jobTitle-${index}`}>Job Title</Label>
                             <Input
                                 type="text"
+                                maxLength={35}
                                 name={`jobTitle-${index}`}
                                 value={company.jobTitle}
                                 onChange={(e) => {
@@ -118,6 +120,7 @@ const Experience = () => {
                     <div className="flex flex-col items-start gap-2 w-full">
                         <Label htmlFor={`jobDescription-${index}`}>Your Contribution</Label>
                         <Textarea
+                            maxLength={350}
                             className="h-32" style={{ resize: 'none' }}
                             name={`jobDescription-${index}`}
                             value={company.jobDescription}

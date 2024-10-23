@@ -19,7 +19,7 @@ const PersonalPreview = () => {
             </div>
             <div className="text-zinc-400 text-xs flex flex-col items-end absolute -top-7 -right-2 gap-1">
                 {(userData.city || userData.country) &&
-                    <div className="flex items-end gap-1">
+                    <div className="flex items-end gap-1 capitalize">
                         {userData.city}, {userData.country}
                     </div>
                 }

@@ -21,6 +21,22 @@ interface Languages {
     proficiency: string
 }
 
+interface Education {
+    degree: string,
+    institutionName: string,
+    location: string,
+    startDate: string;
+    endDate: string;
+}
+
+interface Projects {
+    title: string,
+    sourceCode: string,
+    livePreview: string,
+    description: string,
+}
+
+
 interface UserData {
     //Personal Info
     email: string;
@@ -40,6 +56,8 @@ interface UserData {
     technicalSkills: TechnicalSkills[],
     softSkills: SoftSkills[],
     frameworks: Frameworks[],
+    education: Education[],
+    projects: Projects[],
 }
 
 
@@ -83,7 +101,9 @@ export const UserDataProvider: React.FC<UserDataProviderProps> = ({ children }) 
         languages: [],
         technicalSkills: [],
         softSkills: [],
-        frameworks: []
+        frameworks: [],
+        education: [],
+        projects: []
     });
 
     return (

@@ -15,11 +15,9 @@ function Sidebar({ showSidebar }: { showSidebar: boolean }) {
         { title: "Projects", icon: <FolderCopyIcon fontSize="large" /> },
     ]
 
-    console.log(useActive);
-
     return (
 
-        <div className={`${showSidebar ? "flex" : "hidden"} flex-col items-center justify-start gap-8 pt-24 w-32 p-4`}>
+        <div className={`${showSidebar ? "flex" : "hidden"} lg:flex-col flex-row items-center lg:justify-start justify-between gap-8 pt-24 lg:w-32 w-full p-4`}>
 
             {components.map((item, idx) => {
                 return (

@@ -12,6 +12,7 @@ import {
     SelectValue,
 } from "@/components/ui/select";
 import DeleteIcon from '@mui/icons-material/Delete';
+import { Label } from "@/components/ui/label";
 
 type LanguagesProps = {
     skillsData: { languages: { title: string; proficiency: string }[] };
@@ -46,7 +47,7 @@ const Languages = ({ skillsData, setSkillsData }: LanguagesProps) => {
 
     return (
         <div className="flex flex-col items-start gap-2 w-full">
-            <h1 className="text-xl font-semibold">Languages</h1>
+            <Label>Languages</Label>
 
             <Button onClick={addLanguages}>
                 <AddIcon />Add a Language
@@ -90,7 +91,7 @@ const Languages = ({ skillsData, setSkillsData }: LanguagesProps) => {
                     </div>
                 ))}
             </div>
-        </div>
+        </div >
     );
 };
 

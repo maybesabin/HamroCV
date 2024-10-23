@@ -12,13 +12,12 @@ const ExperiencePreview = () => {
                             return (
                                 <div key={idx} className="flex flex-col items-start w-full">
                                     <div className="flex items-start justify-between w-full">
-                                        <div className="flex flex-col items-start">
-                                            <h1 className="font-bold text-xl">{company.companyName}</h1>
-                                            <h3 className="font-medium text-[0.8rem]">{company.jobTitle}</h3>
-                                        </div>
+                                        <h1 className="font-semibold text-xl">{company.companyName}
+                                            &nbsp;{company.jobTitle && <span className="font-light text-[0.8rem">({company.jobTitle})</span>}
+                                        </h1>
                                         <p className="text-xs">{company.startDate} - {company.endDate}</p>
                                     </div>
-                                    <p className="text-[0.8rem] text-zinc-600">{company.jobDescription}</p>
+                                    <p className="text-[0.8rem] text-zinc-600 max-w-5xl break-words">{company.jobDescription}</p>
                                 </div>
                             )
                         })}

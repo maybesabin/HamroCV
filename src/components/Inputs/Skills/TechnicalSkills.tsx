@@ -5,6 +5,7 @@ import toast from "react-hot-toast";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import DeleteIcon from '@mui/icons-material/Delete';
+import { Label } from "@/components/ui/label";
 
 type TechnicalSkillsProps = {
     skillsData: { technicalSkills: { title: string }[] };
@@ -43,7 +44,7 @@ const TechnicalSkills = ({ skillsData, setSkillsData }: TechnicalSkillsProps) =>
 
     return (
         <div className="flex flex-col items-start gap-2 w-full">
-            <h1 className="text-xl font-semibold">Technical Skills</h1>
+            <Label>Technical Skills</Label>
 
             <Button onClick={addTechnicalSkill}>
                 <AddIcon /> Add Technical Skill
