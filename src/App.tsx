@@ -22,7 +22,7 @@ function App() {
               <div className='lg:w-32 w-full '>
                 <Sidebar showSidebar={showSidebar} />
               </div>
-              <div className={`lg:w-3/4 w-full p-4 ${showSidebar ? "" : "lg:-ml-14 lg:mt-0 mt-[4.25rem]"}`}>
+              <div className={`xl:w-3/4 lg:w-2/4 w-full p-4 ${showSidebar ? "" : "xl:-ml-14 lg:-ml-20 -ml-0 lg:mt-0 mt-[4.25rem]"}`}>
                 <InputForm />
               </div>
               <div className='pt-4 lg:w-full dark:bg-white h-full'>

@@ -28,7 +28,7 @@ const PersonalPreview = () => {
                     {userData.phoneNumber}
                 </div>}
             </div>
-            <div className="flex items-center justify-between 2xl:justify-evenly px-4 pt-4 w-full text-[0.85rem]">
+            <div className="flex items-center lg:flex-wrap flex-nowrap xl:flex-nowrap justify-between xl:justify-evenly px-4 pt-4 w-full text-[0.85rem]">
 
                 {userData.email && <a href={`mailto:${userData.email}`} target="_blank" className="tracking-tight flex items-center gap-1">
                     <MailIcon fontSize="small" />

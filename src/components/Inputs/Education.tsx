@@ -40,7 +40,7 @@ const Education = () => {
         setUserData({ ...userData, education: updatedEducations }); // Update context
     };
     return (
-        <div className='pt-24 pr-4 dark:text-white flex flex-col items-start gap-9 justify-start min-h-screen'>
+        <div className='lg:pt-24 pt-6 pr-4 dark:text-white flex flex-col items-start gap-9 justify-start min-h-screen'>
             <h1 className='text-4xl dark:text-white font-bold text-transparent bg-gradient-to-b from-blue-600 to-blue-400 bg-clip-text'>
                 Education.
             </h1>
@@ -49,8 +49,8 @@ const Education = () => {
 
             {educations.map((education, index) => (
                 <div key={index} className="w-full flex flex-col gap-9 mt-4 border dark:border-zinc-900 rounded-lg px-4 py-6">
-                    <div className="flex items-center gap-6 w-full">
-                        <div className="w-1/2 flex flex-col items-start gap-2">
+                    <div className="flex xl:flex-row flex-col xl:items-center items-start gap-6 w-full">
+                        <div className="flex flex-col items-start gap-2 xl:w-1/2 w-full">
                             <Label htmlFor={`degreeName-${index}`}>Degree Name</Label>
                             <Input
                                 type="text"
@@ -64,7 +64,7 @@ const Education = () => {
                                 }}
                             />
                         </div>
-                        <div className="w-1/2 flex flex-col items-start gap-2">
+                        <div className="flex flex-col items-start gap-2 xl:w-1/2 w-full">
                             <Label htmlFor={`institutionName-${index}`}>Institution Name</Label>
                             <Input
                                 type="text"
@@ -83,20 +83,6 @@ const Education = () => {
 
                     <div className="flex items-center gap-6 w-full">
                         <div className="w-1/2 flex flex-col items-start gap-2">
-                            <Label htmlFor={`location-${index}`}>Institution Location</Label>
-                            <Input
-                                type="text"
-                                name={`location-${index}`}
-                                value={education.location}
-                                onChange={(e) => {
-                                    const updatedEducations = [...educations];
-                                    updatedEducations[index].location = e.target.value;
-                                    setEducations(updatedEducations);
-                                    setUserData({ ...userData, education: updatedEducations }); // Update context
-                                }}
-                            />
-                        </div>
-                        <div className="w-1/2 flex flex-col items-start gap-2">
                             <Label htmlFor={`startDate-${index}`}>Start Date</Label>
                             <Input
                                 type="date"
@@ -110,11 +96,7 @@ const Education = () => {
                                 }}
                             />
                         </div>
-
-                    </div>
-
-                    <div className="flex items-end justify-start gap-6 w-full">
-                        <div className="flex flex-col items-start gap-2">
+                        <div className="w-1/2 flex flex-col items-start gap-2">
                             <Label htmlFor={`endDate-${index}`}>End Date</Label>
                             <Input
                                 type="date"
@@ -128,7 +110,25 @@ const Education = () => {
                                 }}
                             />
                         </div>
-                        <div className="flex items-center justify-end w-full">
+
+                    </div>
+
+                    <div className="flex items-end justify-start gap-6 w-full">
+                        <div className="w-1/2 flex flex-col items-start gap-2">
+                            <Label htmlFor={`location-${index}`}>Institution Location</Label>
+                            <Input
+                                type="text"
+                                name={`location-${index}`}
+                                value={education.location}
+                                onChange={(e) => {
+                                    const updatedEducations = [...educations];
+                                    updatedEducations[index].location = e.target.value;
+                                    setEducations(updatedEducations);
+                                    setUserData({ ...userData, education: updatedEducations }); // Update context
+                                }}
+                            />
+                        </div>
+                        <div className="flex items-center justify-end w-1/2">
                             <Button variant="destructive" onClick={() => deleteCompany(index)}><DeleteIcon />Delete</Button>
                         </div>
                     </div>

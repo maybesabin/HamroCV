@@ -39,7 +39,7 @@ const Projects = () => {
     };
 
     return (
-        <div className='pt-24 pr-4 dark:text-white flex flex-col items-start gap-9 justify-start min-h-screen'>
+        <div className='lg:pt-24 pt-6 pr-4 dark:text-white flex flex-col items-start gap-9 justify-start min-h-screen'>
             <h1 className='text-4xl font-bold dark:text-white text-transparent bg-gradient-to-b from-blue-600 to-blue-400 bg-clip-text'>
                 Projects.
             </h1>
@@ -47,9 +47,9 @@ const Projects = () => {
             <Button onClick={addProject}><AddIcon />Add a project</Button>
 
             {projects.map((project, index) => (
-                <div key={index} className="w-full flex flex-col gap-9 mt-4 border rounded-lg px-4 py-6">
-                    <div className="flex items-center gap-6 w-full">
-                        <div className="w-1/2 flex flex-col items-start gap-2">
+                <div key={index} className="w-full flex flex-col gap-9 mt-4 border dark:border-zinc-900 rounded-lg px-4 py-6">
+                    <div className="flex xl:flex-row flex-col xl:items-center items-start gap-6 w-full">
+                        <div className="flex flex-col items-start gap-2 xl:w-1/2 w-full">
                             <Label htmlFor={`projectName-${index}`}>Project Name</Label>
                             <Input
                                 type="text"
@@ -63,7 +63,7 @@ const Projects = () => {
                                 }}
                             />
                         </div>
-                        <div className="w-1/2 flex flex-col items-start gap-2">
+                        <div className="flex flex-col items-start gap-2 xl:w-1/2 w-full">
                             <Label htmlFor={`sourceCode-${index}`}>Source Code Link</Label>
                             <Input
                                 type="text"
@@ -80,8 +80,8 @@ const Projects = () => {
 
                     </div>
 
-                    <div className="flex items-start justify-between gap-6 w-full">
-                        <div className="w-1/2 flex flex-col items-start gap-2">
+                    <div className="flex xl:flex-row flex-col items-start justify-between gap-6 w-full">
+                        <div className="xl:w-1/2 w-full flex flex-col items-start gap-2">
                             <Label htmlFor={`description-${index}`}>Description</Label>
                             <Textarea
                                 maxLength={300}
@@ -97,7 +97,7 @@ const Projects = () => {
                                 }}
                             />
                         </div>
-                        <div className="flex flex-col items-start justify-start gap-4 w-1/2">
+                        <div className="flex xl:flex-col flex-row xl:items-start items-end xl:justify-start justify-between gap-4 xl:w-1/2 w-full">
                             <div className="w-full flex flex-col items-start gap-2">
                                 <Label htmlFor={`livePreview-${index}`}>Live Preview Link</Label>
                                 <Input
@@ -112,7 +112,7 @@ const Projects = () => {
                                     }}
                                 />
                             </div>
-                            <div className="flex justify-start w-full">
+                            <div className="flex justify-start xl:w-full">
                                 <Button variant="destructive" onClick={() => deleteProject(index)}><DeleteIcon />Delete</Button>
                             </div>
                         </div>

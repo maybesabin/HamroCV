@@ -78,9 +78,9 @@ const Personal = () => {
 
             <div className="flex flex-col items-start gap-2 w-full">
                 <Label htmlFor="personalWebsite">Personal Website URL</Label>
-                <div className="flex xl:flex-row flex-col xl:items-center items-start gap-4 w-full">
-                    <Input className="w-1/2" value={userData.personalWebsite} onChange={handleChange} type="text" name="personalWebsite" />
-                    <div className="flex items-center gap-6 justify-end w-1/2">
+                <div className="flex xl:flex-row flex-col xl:items-center items-start justify-between gap-4 w-full">
+                    <Input className="xl:w-1/2 w-full" value={userData.personalWebsite} onChange={handleChange} type="text" name="personalWebsite" />
+                    <div className="flex items-center gap-6 justify-end w-full xl:w-1/2">
                         <Button className="flex items-center gap-6" onClick={() => setIsActive("Experience")}>Next <ArrowForwardIosIcon /></Button>
                     </div>
                 </div>

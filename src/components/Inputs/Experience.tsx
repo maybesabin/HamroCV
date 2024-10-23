@@ -41,7 +41,7 @@ const Experience = () => {
     };
 
     return (
-        <div className='pt-24 pr-4 flex flex-col items-start gap-9 justify-start min-h-screen dark:text-white'>
+        <div className='lg:pt-24 pt-6 pr-4 flex flex-col items-start gap-9 justify-start min-h-screen dark:text-white'>
             <div className="flex flex-col items-start gap-1">
                 <h1 className='text-4xl font-bold dark:text-white text-transparent bg-gradient-to-b from-blue-600 to-blue-400 bg-clip-text'>
                     Work Experience.
@@ -53,8 +53,8 @@ const Experience = () => {
 
             {companies.map((company, index) => (
                 <div key={index} className="w-full flex flex-col gap-9 mt-4 border rounded-lg px-4 py-6 dark:border-zinc-900">
-                    <div className="flex items-center gap-6 w-full">
-                        <div className="w-1/2 flex flex-col items-start gap-2">
+                    <div className="flex xl:flex-row flex-col xl:items-center items-start gap-6 w-full">
+                        <div className="flex flex-col items-start gap-2 xl:w-1/2 w-full">
                             <Label htmlFor={`companyName-${index}`}>Company's Name</Label>
                             <Input
                                 maxLength={35}
@@ -69,7 +69,7 @@ const Experience = () => {
                                 }}
                             />
                         </div>
-                        <div className="w-1/2 flex flex-col items-start gap-2">
+                        <div className="flex flex-col items-start gap-2 xl:w-1/2 w-full">
                             <Label htmlFor={`jobTitle-${index}`}>Job Title</Label>
                             <Input
                                 type="text"

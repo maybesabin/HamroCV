@@ -50,7 +50,7 @@ const Frameworks = ({ skillsData, setSkillsData }: FrameworksProps) => {
                 <AddIcon />Add Framework
             </Button>
 
-            <div className="grid grid-cols-2 gap-4 w-full">
+            <div className="grid xl:grid-cols-2 lg:grid-cols-1 md:grid-cols-2 grid-cols-1 gap-4 w-full">
                 {frameworks.map((framework, idx) => {
                     return (
                         <div key={idx} className="flex items-center gap-4 w-full">

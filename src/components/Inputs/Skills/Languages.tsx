@@ -53,7 +53,7 @@ const Languages = ({ skillsData, setSkillsData }: LanguagesProps) => {
                 <AddIcon />Add a Language
             </Button>
 
-            <div className="grid grid-cols-1 gap-4 w-[75%]">
+            <div className="grid grid-cols-1 gap-4 w-full">
                 {languages.map((language, idx) => (
                     <div key={idx} className="flex items-center gap-4 w-full">
                         <Input

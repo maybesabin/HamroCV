@@ -12,7 +12,7 @@ function CVPreview() {
     const { userData } = useUserData();
 
     return (
-        <div className="dark:bg-white min-h-screen flex items-center justify-start flex-wrap pt-24 pb-12 gap-4 flex-col h-full w-full pr-4 border-zinc-100 border-[1px] border-b-0">
+        <div className="dark:bg-white min-h-screen lg:w-full w-screen flex items-center justify-start flex-wrap pt-24 pb-12 gap-4 flex-col h-full pr-4 border-zinc-100 border-[1px] border-b-0">
             {userData.firstName && <PersonalInfo />}
             {userData.technicalSkills.length > 0 && <TechnicalSkillsPreview />}
             {userData.frameworks.length > 0 && <FrameworksPreview />}
