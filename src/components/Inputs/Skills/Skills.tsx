@@ -23,8 +23,8 @@ const Skills = () => {
 
     const { setIsActive } = useActive();
     return (
-        <div className='pt-24 pr-4 flex flex-col items-start gap-9 justify-start min-h-screen'>
-            <h1 className='text-4xl font-bold text-transparent bg-gradient-to-b from-blue-600 to-blue-400 bg-clip-text'>
+        <div className='pt-24 pr-4 flex flex-col dark:text-white items-start gap-9 justify-start min-h-screen'>
+            <h1 className='text-4xl font-bold dark:text-white text-transparent bg-gradient-to-b from-blue-600 to-blue-400 bg-clip-text'>
                 Skills.
             </h1>
 

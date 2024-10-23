@@ -21,7 +21,7 @@ function Sidebar({ showSidebar }: { showSidebar: boolean }) {
 
             {components.map((item, idx) => {
                 return (
-                    <div onClick={() => setIsActive(item.title)} key={idx} className={`flex flex-col items-center cursor-pointer hover:bg-zinc-300 ${isActive === item.title ? "bg-zinc-300" : "bg-zinc-100"} transition-all duration-500 ease-in-out rounded-lg py-3 w-full gap-2`}>
+                    <div onClick={() => setIsActive(item.title)} key={idx} className={`flex flex-col items-center cursor-pointer dark:text-white dark:bg-black dark:border dark:border-zinc-900 hover:bg-zinc-300 ${isActive === item.title ? "bg-zinc-300 dark:bg-zinc-800" : "bg-zinc-100"} transition-all duration-500 ease-in-out rounded-lg py-3 w-full gap-2`}>
                         {item.icon}
                         <h1 className='text-center text-[0.8rem]'>{item.title}</h1>
                     </div>

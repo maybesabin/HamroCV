@@ -8,7 +8,7 @@ import Education from './Education'
 function InputForm() {
     const { isActive } = useActive();
     return (
-        <div className="border-l-zinc-200 border-r-zinc-100 pl-4 -mx-4 lg:min-h-screen h-auto border border-b-0 border-t-0">
+        <div className="border-l-0 border-r-zinc-100 pl-4 -mx-4 lg:min-h-screen h-auto border border-b-0 border-t-0">
             {isActive == "About" ? <About />
                 : isActive == "Skills" ? < Skills />
                     : isActive == "Experience" ? <Experience />

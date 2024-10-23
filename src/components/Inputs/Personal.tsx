@@ -1,7 +1,6 @@
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import AddIcon from '@mui/icons-material/Add';
 import { useUserData } from "@/Context/UserData";
 import { Button } from "../ui/button";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
@@ -17,8 +16,8 @@ const Personal = () => {
     };
 
     return (
-        <div className='lg:pt-24 pt-6 pr-4 flex flex-col items-start gap-9 justify-start min-h-screen overscroll-y-scroll'>
-            <h1 className='text-4xl font-bold text-transparent bg-gradient-to-b from-blue-600 to-blue-400 bg-clip-text'>
+        <div className='lg:pt-24 pt-6 pr-4 flex flex-col items-start gap-9 justify-start min-h-screen overscroll-y-scroll dark:bg-black dark:text-white'>
+            <h1 className='text-4xl font-bold text-transparent dark:text-white bg-gradient-to-b from-blue-600 to-blue-400 bg-clip-text'>
                 Personal Information.
             </h1>
 
@@ -80,17 +79,13 @@ const Personal = () => {
             <div className="flex flex-col items-start gap-2 w-full">
                 <Label htmlFor="personalWebsite">Personal Website URL</Label>
                 <div className="flex xl:flex-row flex-col xl:items-center items-start gap-4 w-full">
-                    <Input value={userData.personalWebsite} onChange={handleChange} type="text" name="personalWebsite" />
-                    <div className="flex items-center bg-blue-500 text-white font-semibold h-10 xl:w-48 w-40 text-xs cursor-pointer hover:bg-blue-600 rounded-full justify-center gap-2">
-                        <AddIcon fontSize="small" />
-                        <h3>Add Social Link</h3>
+                    <Input className="w-1/2" value={userData.personalWebsite} onChange={handleChange} type="text" name="personalWebsite" />
+                    <div className="flex items-center gap-6 justify-end w-1/2">
+                        <Button className="flex items-center gap-6" onClick={() => setIsActive("Experience")}>Next <ArrowForwardIosIcon /></Button>
                     </div>
                 </div>
             </div>
 
-            <div className="flex items-center gap-6 justify-end w-full">
-                <Button className="flex items-center gap-6" onClick={() => setIsActive("Experience")}>Next <ArrowForwardIosIcon /></Button>
-            </div>
         </div>
     )
 }

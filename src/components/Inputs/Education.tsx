@@ -40,15 +40,15 @@ const Education = () => {
         setUserData({ ...userData, education: updatedEducations }); // Update context
     };
     return (
-        <div className='pt-24 pr-4 flex flex-col items-start gap-9 justify-start min-h-screen'>
-            <h1 className='text-4xl font-bold text-transparent bg-gradient-to-b from-blue-600 to-blue-400 bg-clip-text'>
+        <div className='pt-24 pr-4 dark:text-white flex flex-col items-start gap-9 justify-start min-h-screen'>
+            <h1 className='text-4xl dark:text-white font-bold text-transparent bg-gradient-to-b from-blue-600 to-blue-400 bg-clip-text'>
                 Education.
             </h1>
 
             <Button onClick={addEducation}><AddIcon />Add a qualification</Button>
 
             {educations.map((education, index) => (
-                <div key={index} className="w-full flex flex-col gap-9 mt-4 border rounded-lg px-4 py-6">
+                <div key={index} className="w-full flex flex-col gap-9 mt-4 border dark:border-zinc-900 rounded-lg px-4 py-6">
                     <div className="flex items-center gap-6 w-full">
                         <div className="w-1/2 flex flex-col items-start gap-2">
                             <Label htmlFor={`degreeName-${index}`}>Degree Name</Label>

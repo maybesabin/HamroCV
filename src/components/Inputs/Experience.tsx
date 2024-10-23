@@ -41,18 +41,18 @@ const Experience = () => {
     };
 
     return (
-        <div className='pt-24 pr-4 flex flex-col items-start gap-9 justify-start min-h-screen'>
+        <div className='pt-24 pr-4 flex flex-col items-start gap-9 justify-start min-h-screen dark:text-white'>
             <div className="flex flex-col items-start gap-1">
-                <h1 className='text-4xl font-bold text-transparent bg-gradient-to-b from-blue-600 to-blue-400 bg-clip-text'>
+                <h1 className='text-4xl font-bold dark:text-white text-transparent bg-gradient-to-b from-blue-600 to-blue-400 bg-clip-text'>
                     Work Experience.
                 </h1>
-                <p className="text-xs text-zinc-600">If you don't have any past  work experiences, you can skip this section.</p>
+                <p className="text-xs dark:text-white text-zinc-600">If you don't have any past  work experiences, you can skip this section.</p>
             </div>
 
             <Button onClick={addCompany}><AddIcon />Add a company</Button>
 
             {companies.map((company, index) => (
-                <div key={index} className="w-full flex flex-col gap-9 mt-4 border rounded-lg px-4 py-6">
+                <div key={index} className="w-full flex flex-col gap-9 mt-4 border rounded-lg px-4 py-6 dark:border-zinc-900">
                     <div className="flex items-center gap-6 w-full">
                         <div className="w-1/2 flex flex-col items-start gap-2">
                             <Label htmlFor={`companyName-${index}`}>Company's Name</Label>

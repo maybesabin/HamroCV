@@ -55,7 +55,7 @@ const PersonalPreview = () => {
 
 
             </div>
-            {userData.firstName && <Separator />}
+            {userData.firstName && <Separator className="dark:bg-zinc-200" />}
         </div>
     )
 }
