@@ -1,26 +1,21 @@
 import { Button } from "./ui/button";
-import { useRef } from 'react';
-import html2pdf from 'html2pdf.js';
-import CVPreview from "./CVPreview";
-import { useUserData } from '../Context/UserData';
+import html2canvas from 'html2canvas';
 
 const DownloadPDF = () => {
-    const cvRef = useRef<HTMLDivElement>(null);
-    const { userData } = useUserData();
+    const handleDownload = async () => {
+        const cvPreviewElement: any = document.getElementById('cv-preview');
 
-    const handleDownload = () => {
-        const element = cvRef.current;
-        if (element) {
-            const opt = {
-                margin: 1,
-                filename: 'cv-preview.pdf',
-                image: { type: 'jpeg', quality: 0.98 },
-                html2canvas: { scale: 2 },
-                jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' },
-            };
+        try {
+            const canvas = await html2canvas(cvPreviewElement);
 
-            // Convert to PDF
-            html2pdf().from(element).set(opt).save();
+            const dataURL = canvas.toDataURL('image/png');
+
+            const a = document.createElement('a');
+            a.href = dataURL;
+            a.download = 'myCV.png';
+            a.click();
+        } catch (error) {
+            console.error('Error converting to image:', error);
         }
     };
 
@@ -29,12 +24,9 @@ const DownloadPDF = () => {
             <h1 className='text-4xl font-bold text-transparent dark:text-white bg-gradient-to-b from-blue-600 to-blue-400 bg-clip-text'>
                 Download PDF
             </h1>
-            <Button onClick={handleDownload} className="btn-download" disabled={!userData || Object.keys(userData).length === 0}>
+            <Button className="btn-download" onClick={handleDownload}>
                 Download PDF
             </Button>
-            <div ref={cvRef} style={{ display: 'none' }}>
-                <CVPreview /> {/* Pass userData as a prop */}
-            </div>
         </div>
     );
 };
