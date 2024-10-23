@@ -5,7 +5,7 @@ const ExperiencePreview = () => {
     return (
         <>
             {userData.companies.length > 0 &&
-                <div className="flex flex-col items-start w-full px-4 pt-6">
+                <div className="flex flex-col items-start w-full px-4 pt-6 capitalize">
                     <h1 className="font-bold uppercase text-3xl">Experience</h1>
                     <div className="flex w-full flex-col items-start gap-4 pt-4">
                         {userData.companies.map((company, idx) => {
@@ -17,7 +17,7 @@ const ExperiencePreview = () => {
                                         </h1>
                                         <p className="text-xs">{company.startDate} - {company.endDate}</p>
                                     </div>
-                                    <p className="text-[0.8rem] text-zinc-600 max-w-5xl break-words">{company.jobDescription}</p>
+                                    <p className="text-[0.8rem] max-w-5xl break-words normal-case">{company.jobDescription}</p>
                                 </div>
                             )
                         })}

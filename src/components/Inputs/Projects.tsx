@@ -80,27 +80,15 @@ const Projects = () => {
 
                     </div>
 
-                    <div className="flex items-start justify-start gap-6 w-full">
-                        <div className="w-1/2 flex flex-col items-start gap-2">
-                            <Label htmlFor={`livePreview-${index}`}>Live Preview Link</Label>
-                            <Input
-                                type="text"
-                                name={`livePreview-${index}`}
-                                value={project.livePreview}
-                                onChange={(e) => {
-                                    const updatedProjects = [...projects];
-                                    updatedProjects[index].livePreview = e.target.value;
-                                    setProjects(updatedProjects);
-                                    setUserData({ ...userData, projects: updatedProjects }); // Update context
-                                }}
-                            />
-                        </div>
+                    <div className="flex items-start justify-between gap-6 w-full">
                         <div className="w-1/2 flex flex-col items-start gap-2">
                             <Label htmlFor={`description-${index}`}>Description</Label>
                             <Textarea
                                 maxLength={300}
                                 name={`description-${index}`}
                                 value={project.description}
+                                className="h-52"
+                                style={{ resize: "none" }}
                                 onChange={(e) => {
                                     const updatedProjects = [...projects];
                                     updatedProjects[index].description = e.target.value;
@@ -109,9 +97,25 @@ const Projects = () => {
                                 }}
                             />
                         </div>
-                    </div>
-                    <div className="flex justify-start">
-                        <Button variant="destructive" onClick={() => deleteProject(index)}><DeleteIcon />Delete</Button>
+                        <div className="flex flex-col items-start justify-start gap-4 w-1/2">
+                            <div className="w-full flex flex-col items-start gap-2">
+                                <Label htmlFor={`livePreview-${index}`}>Live Preview Link</Label>
+                                <Input
+                                    type="text"
+                                    name={`livePreview-${index}`}
+                                    value={project.livePreview}
+                                    onChange={(e) => {
+                                        const updatedProjects = [...projects];
+                                        updatedProjects[index].livePreview = e.target.value;
+                                        setProjects(updatedProjects);
+                                        setUserData({ ...userData, projects: updatedProjects }); // Update context
+                                    }}
+                                />
+                            </div>
+                            <div className="flex justify-start w-full">
+                                <Button variant="destructive" onClick={() => deleteProject(index)}><DeleteIcon />Delete</Button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             ))}

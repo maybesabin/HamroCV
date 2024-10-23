@@ -114,7 +114,7 @@ const Education = () => {
                     </div>
 
                     <div className="flex items-end justify-start gap-6 w-full">
-                        <div className="w-1/2 flex flex-col items-start gap-2">
+                        <div className="flex flex-col items-start gap-2">
                             <Label htmlFor={`endDate-${index}`}>End Date</Label>
                             <Input
                                 type="date"
@@ -128,7 +128,7 @@ const Education = () => {
                                 }}
                             />
                         </div>
-                        <div className="w-1/2">
+                        <div className="flex items-center justify-end w-full">
                             <Button variant="destructive" onClick={() => deleteCompany(index)}><DeleteIcon />Delete</Button>
                         </div>
                     </div>
