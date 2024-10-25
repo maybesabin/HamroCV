@@ -32,24 +32,24 @@ const PersonalPreview = () => {
 
                 {userData.email && <a href={`mailto:${userData.email}`} target="_blank" className="tracking-tight flex items-center gap-1">
                     <MailIcon fontSize="small" />
-                    {userData.email}
+                    <h1>{userData.email}</h1>
                 </a>
                 }
 
                 {userData.githubProfile && <a href={userData.githubProfile} target="_blank" className="tracking-tight flex items-center gap-1">
                     <GitHubIcon fontSize="small" />
-                    Github Profile
+                    <h1>Github Profile</h1>
                 </a>
                 }
 
-                {userData.linkedinProfile && <a href={userData.linkedinProfile} target="_blank" className="flex tracking-tight items-center gap-1">
+                {userData.linkedinProfile && <a href={userData.linkedinProfile} target="_blank" className="flex tracking-tight items-end gap-1">
                     <LinkedInIcon fontSize="small" />
-                    LinkedIn Profile
+                    <h1>LinkedIn Profile</h1>
                 </a>}
 
                 {userData.personalWebsite && <a href={`https://${userData.personalWebsite}`} target="_blank" className="tracking-tight flex items-center gap-1">
                     <LanguageIcon fontSize="small" />
-                    {userData.personalWebsite}
+                    <h1>{userData.personalWebsite}</h1>
                 </a>
                 }
 
