@@ -1,7 +1,6 @@
 import { Button } from "./ui/button";
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
-import CVPreview from './CVPreview';
 import ExperienceInfo from "./InputsPreview/Experience-Preview";
 import PersonalInfo from "./InputsPreview/Personal-Preview";
 import FrameworksPreview from "./InputsPreview/Frameworks-Preview";
