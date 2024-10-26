@@ -64,7 +64,7 @@ const DownloadPDF = () => {
             <Button className="btn-download" onClick={handleDownload}>
                 Download Resume
             </Button>
-            <div>
+            <div className="invisible">
                 <PersonalInfo />
                 <TechnicalSkillsPreview />
                 <FrameworksPreview />
